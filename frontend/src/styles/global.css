@@ -35,3 +35,15 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+.level-badge { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; color: #fff; white-space: nowrap; }
+.level-normal { background: #16a34a; }
+.level-blue { background: #2563eb; }
+.level-yellow { background: #ca8a04; }
+.level-orange { background: #ea580c; }
+.level-red { background: #dc2626; }
+.rule-note { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 12px; color: var(--muted); }
+.rule-note p { margin: 4px 0; }
+.section-title { font-size: 14px; margin: 16px 0 8px; }
+.ok-text { color: #15803d; }
+.missing-text { color: #b42318; font-weight: 600; }
+.conflict-text { color: #b45309; font-weight: 600; }

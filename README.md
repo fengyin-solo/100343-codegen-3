@@ -69,3 +69,16 @@ npm run build
   `frontend/src/data/seed.ts`。
 - 状态流转只允许在 `local-service.ts` 里改，页面组件不做业务判断。
 - 想回到初始数据：清掉浏览器里 `forest-fire-patrol:entries` 这一项，或调用 `resetModule(模块)`。
+
+## 火险等级校准工作台
+
+火险监测模块下挂了 `/firewatch/calibration` 校准工作台（入口在火险监测页面右上角）：
+
+- 判定标准在 `frontend/src/data/calibration.ts`（版本号 `FW-STD-2026.10`）：按火险等级、
+  风力等级、相对湿度、气温读数打分得出建议等级，列表里高等级监测点排在前面。
+- 建议等级与人工设置冲突时**就高不就低**，取两者中较高的等级作为校准结论。
+- 缺失风力数据的监测点结论不能降级到正常，保底蓝色预警。
+- 校准生效后会在巡护任务模块生成一条核实事项（`PATR-VERI-` 编号）；同一监测点只保留一条
+  有效结论，重复上报不重复生成，历史结论按当时标准版本留档不回改。
+- 校准逻辑在 `frontend/src/api/calibration-service.ts`，历史结论存在 localStorage 的
+  `firewatch-calibration` 键下。
