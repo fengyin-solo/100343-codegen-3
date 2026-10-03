@@ -35,3 +35,22 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+
+/* 等级校准工作台 */
+.calibration-board { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; }
+.board-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.board-head h3 { margin: 0 0 4px; font-size: 15px; }
+.standard-rules { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 8px 0; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
+.standard-rules li::before { content: '·'; margin-right: 6px; color: var(--brand); }
+.board-summary { margin: 4px 0 10px; font-size: 12px; color: var(--muted); }
+.board-message { margin-left: 12px; color: var(--brand); }
+.history-title { margin: 14px 0 8px; font-size: 13px; }
+.level-badge { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+.level-badge[data-level="正常"] { background: #e7f6ec; color: #18794e; }
+.level-badge[data-level="蓝色预警"] { background: #e3effd; color: #1d4ed8; }
+.level-badge[data-level="黄色预警"] { background: #fef3c7; color: #b45309; }
+.level-badge[data-level="橙色预警"] { background: #ffedd5; color: #c2410c; }
+.level-badge[data-level="红色预警"] { background: #fee2e2; color: #b91c1c; }
+.conflict-tag { margin-left: 6px; font-size: 12px; color: #b42318; white-space: nowrap; }
+.missing-text { color: #b42318; font-weight: 600; }
+.basis-cell { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--muted); }
